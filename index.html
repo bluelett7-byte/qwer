@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🌟 5학년 미니홈피 하루일지 🌟</title>
+    <style>
+        :root {
+            --bg-color: #f3e5f5;
+            --main-pink: #fce4ec;
+            --main-purple: #e6e6fa;
+            --main-mint: #e0f7fa;
+            --main-yellow: #fffde7;
+            --border-color: #d1c4e9;
+        }
+
+        body {
+            font-family: 'Malgun Gothic', 'Apple SD Gothic Neo', sans-serif;
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 20px;
+            color: #333;
+        }
+
+        .cyworld-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            border: 3px solid #b39ddb;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+            overflow: hidden;
+            padding: 20px;
+        }
+
+        .header {
+            text-align: center;
+            border-bottom: 2px dashed #b39ddb;
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+        }
+
+        .header h1 {
+            color: #5e35b1;
+            margin: 5px 0;
+            font-size: 24px;
+        }
+
+        .header p {
+            color: #7e57c2;
+            font-size: 14px;
+            margin: 0;
+        }
+
+        .top-info {
+            display: flex;
+            justify-content: space-between;
+            background-color: var(--main-purple);
+            padding: 10px 15px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            font-size: 14px;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        th, td {
+            border: 1px solid var(--border-color);
+            padding: 10px;
+            vertical-align: middle;
+            font-size: 14px;
+        }
+
+        th {
+            background-color: #ede7f6;
+            color: #4527a0;
+            width: 25%;
+            text-align: center;
+        }
+
+        td input[type="text"], td textarea {
+            width: 95%;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 6px;
+            font-family: inherit;
+            font-size: 14px;
+        }
+
+        td textarea {
+            resize: vertical;
+            height: 50px;
+        }
+
+        .section-pink { background-color: var(--main-pink); }
+        .section-mint { background-color: var(--main-mint); }
+        .section-yellow { background-color: var(--main-yellow); }
+        .section-purple { background-color: var(--main-purple); }
+
+        .checklist-box {
+            background-color: #fff8e1;
+            border: 2px solid #ffe082;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+
+        .checklist-box h3 {
+            margin-top: 0;
+            color: #f57f17;
+            font-size: 16px;
+        }
+
+        .checklist-item {
+            margin-bottom: 8px;
+            font-size: 14px;
+        }
+
+        .btn-group {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .btn {
+            background-color: #7e57c2;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .btn:hover {
+            background-color: #5e35b1;
+        }
+
+        @media print {
+            body { background: white; padding: 0; }
+            .cyworld-container { border: none; box-shadow: none; max-width: 100%; }
+            .btn-group { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="cyworld-container">
+    <div class="header">
+        <h1>🌟 Minihompy Diary 🌟</h1>
+        <p>~ 오늘 하루도 파도타기처럼 즐겁고 신나게! ~ 🌊</p>
+    </div>
+
+    <div class="top-info">
+        <div>📅 <strong>날짜:</strong> <input type="date" id="diary-date"></div>
+        <div>☁️ <strong>날씨:</strong> 
+            <select>
+                <option>☀️ 맑음</option>
+                <option>☁️ 구름</option>
+                <option>🌧️ 비</option>
+                <option>❄️ 눈</option>
+            </select>
+        </div>
+        <div>😄 <strong>기분:</strong> 
+            <select>
+                <option>🌸 기쁨</option>
+                <option>🌿 만족</option>
+                <option>☁️ 보통</option>
+                <option>☔ 아쉬움</option>
+                <option>⚡ 화남</option>
+            </select>
+        </div>
+    </div>
+
+    <table>
+        <tr>
+            <th>🎵 오늘의 BGM</th>
+            <td><input type="text" placeholder="오늘 나의 주제곡이나 좋아하는 노래를 적어보세요"></td>
+        </tr>
+        <tr class="section-pink">
+            <th>🌿 오늘의 감사</th>
+            <td><textarea placeholder="1. &#10;2. (사소하지만 고마웠던 일 2가지)"></textarea></td>
+        </tr>
+        <tr class="section-purple">
+            <th>💪 나의 강점 탐구</th>
+            <td>
+                • 오늘 사용한 강점: 
+                <label><input type="checkbox"> 배려</label> 
+                <label><input type="checkbox"> 끈기</label> 
+                <label><input type="checkbox"> 창의성</label> 
+                <label><input type="checkbox"> 책임감</label><br>
+                • 그렇게 생각한 이유: <input type="text" style="margin-top:5px;">
+            </td>
+        </tr>
+        <tr class="section-mint">
+            <th>📚 오늘의 독서</th>
+            <td><input type="text" placeholder="읽은 책 제목 & 기억에 남는 한 문장/느낀 점"></td>
+        </tr>
+        <tr>
+            <th>🔤 오늘의 영어</th>
+            <td><input type="text" placeholder="오늘 배운 표현/단어 및 뜻"></td>
+        </tr>
+        <tr class="section-yellow">
+            <th>🏫 시간표 & 배움</th>
+            <td><input type="text" placeholder="1교시:        2교시:        3교시:        4교시:        5교시:        6교시:"></td>
+        </tr>
+        <tr>
+            <th>📌 알림장 & 준비물</th>
+            <td><input type="text" placeholder="내일 가져와야 할 준비물 및 과제 체크"></td>
+        </tr>
+        <tr class="section-pink">
+            <th>⭐ 오늘 마음 성찰</th>
+            <td><textarea placeholder="• 가장 기억에 남는 일:&#10;• 👏 나를 칭찬해요 (도토리 +1):&#10;• 💡 내일은 개선해요:"></textarea></td>
+        </tr>
+        <tr class="section-purple">
+            <th>💌 토닥토닥 비밀편지</th>
+            <td><textarea placeholder="오늘 수고한 나에게 전하는 따뜻한 위로와 격려의 말"></textarea></td>
+        </tr>
+        <tr>
+            <th>🍰 소확행 & 낙서존</th>
+            <td><textarea placeholder="오늘 나를 웃게 만든 일이나 간식, 생각을 자유롭게 적어보세요!"></textarea></td>
+        </tr>
+        <tr class="section-mint">
+            <th>💬 짝꿍 일촌평</th>
+            <td><input type="text" placeholder="일촌 친구 이름: (          ) / 응원의 한마디: "></td>
+        </tr>
+        <tr style="background-color: #ffebee;">
+            <th>👩‍🏫 교사 확인</th>
+            <td><input type="text" placeholder="선생님 한마디 및 도토리 적립 [ 🌰 획득! ] (확인 사인: ____ )"></td>
+        </tr>
+    </table>
+
+    <!-- 체크리스트 위젯 -->
+    <div class="checklist-box">
+        <h3>🏫 [하교 전 체크] 도토리 획득을 위한 미니미 준비물 검사!</h3>
+        <div class="checklist-item"><label><input type="checkbox"> 알림장 작성 및 안내장 가방에 넣기</label></div>
+        <div class="checklist-item"><label><input type="checkbox"> 책상 속과 서랍 깔끔하게 정리하기</label></div>
+        <div class="checklist-item"><label><input type="checkbox"> 오늘 가지고 온 개인 물건(필통, 수저통 등) 챙기기</label></div>
+        <div class="checklist-item"><label><input type="checkbox"> 내일 제출해야 하는 숙제/안내장 챙기기</label></div>
+    </div>
+
+    <div class="btn-group">
+        <button class="btn" onclick="window.print()">🖨️ 이 일지 인쇄하기</button>
+    </div>
+</div>
+
+</body>
+</html>
